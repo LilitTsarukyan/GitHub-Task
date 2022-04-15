@@ -1,0 +1,51 @@
+let person = [{
+    name: "Mike"
+  },
+  {
+    lastname: "Adamyan"
+  },
+  {
+    age: 24
+  },
+  {
+    phone: "828237"
+  },
+  {
+    address: "Tesyan street, 14"
+  },
+  {
+    email: "mike.adamyan@gmail.com"
+  },
+  {
+    jobtitle: "QA Engineer"
+  }
+
+];
+
+let Person = person.reduce(function(aggr, val) {
+  if (val.name !== undefined) {
+    aggr.name = val.name;
+  }
+  if (val.lastname !== undefined) {
+    aggr.lastname = val.lastname;
+  }
+  if (val.age !== undefined) {
+    aggr.age = val.age;
+  }
+  if (val.phone !== undefined) {
+    aggr.phone = val.phone;
+  }
+  if (val.address !== undefined) {
+    aggr.address = val.address;
+  }
+  if (val.email !== undefined) {
+    aggr.email = val.email;
+  }
+  if (val.jobtitle !== undefined) {
+    aggr.jobtitle = val.jobtitle;
+  }
+  return aggr;
+
+});
+
+alert(JSON.stringify(Person, undefined, 5));
